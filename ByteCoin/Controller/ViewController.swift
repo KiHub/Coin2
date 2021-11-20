@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     let coinManager = CoinManager()
     
+    
+    
    
     
     
@@ -27,12 +29,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         currencyPicker.dataSource = self
         currencyPicker.delegate  = self
         
-        //let urlString = (coinManager.baseURL + "/()" + coinManager.apiKey)
-        let urlString = ""
         
+        //let urlString = (coinManager.baseURL + "/()" + coinManager.apiKey)
+    //    let urlString = "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=8F27EEDB-9BF2-46F4-A4CF-282D35F1375B"
+      //  let urlStrinTwo = coinManager.baseURL + "/" +  + coinManager.apiKey
+       
        // print(urlString)
-        let url = URL(string: urlString)
-        let session = URLSessionConfiguration.
+       
         
         
     }
