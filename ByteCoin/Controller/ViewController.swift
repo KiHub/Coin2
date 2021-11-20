@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     let coinManager = CoinManager()
     
-    
+   
     
     
 
@@ -27,6 +27,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         currencyPicker.dataSource = self
         currencyPicker.delegate  = self
         
+        //let urlString = (coinManager.baseURL + "/()" + coinManager.apiKey)
+        let urlString = ""
+        
+       // print(urlString)
+        let url = URL(string: urlString)
+        let session = URLSessionConfiguration.
         
         
     }
@@ -47,11 +53,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print(coinManager.currencyArray[row])
         let selectedCurency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurency)
-       
+        
         
     }
 
-   performre
+//    func performRequest(with: urlString: String) {
+//
+//    }
     
 }
 

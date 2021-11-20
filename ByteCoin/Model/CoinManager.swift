@@ -13,9 +13,13 @@ struct CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
     let apiKey = "8F27EEDB-9BF2-46F4-A4CF-282D35F1375B"
     
+    
+    
+    
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
 
     func getCoinPrice(for currency: String)  {
+       
         
     }
     
