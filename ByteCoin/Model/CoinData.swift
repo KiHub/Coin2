@@ -10,5 +10,6 @@ import Foundation
 
 struct CoinData: Codable {
     let rate: Double 
+  //  let finalPrice: Double
     
 }

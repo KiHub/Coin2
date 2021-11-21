@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
     
     
     
@@ -26,10 +26,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coinManager.delegate = self
         currencyPicker.dataSource = self
         currencyPicker.delegate  = self
         
-        
+       
         //let urlString = (coinManager.baseURL + "/()" + coinManager.apiKey)
     //    let urlString = "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=8F27EEDB-9BF2-46F4-A4CF-282D35F1375B"
       //  let urlStrinTwo = coinManager.baseURL + "/" +  + coinManager.apiKey
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let selectedCurency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurency)
         
+      //  bitcoinLabel.text = coinManager.getCoinPrice(for: selectedCurency)
         
     }
 
@@ -66,3 +68,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
 }
 
+extension ViewController: CoinManagerDelagate {
+    func updataInterface(_: CoinManager, currency: String, with finalPrice: String) {
+        DispatchQueue.main.async {
+            self.bitcoinLabel.text = finalPrice
+            self.currencyLabel.text = currency
+    }
+    
+   
+        
+    }
+    
+    
+    
+    
+    
+}
