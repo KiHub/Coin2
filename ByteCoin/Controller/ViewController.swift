@@ -12,13 +12,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var coinManager = CoinManager()
     
-    
-    
-   
-    
-    
-
-    
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
